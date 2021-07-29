@@ -5,11 +5,15 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "build:css": "tailwind build styles/globals.css -o tailwind/tailwind.css"
   },
   "dependencies": {
-    "next": "^10.0.0",
+    "autoprefixer": "^10.0.4",
+    "next": "^10.0.3",
+    "postcss": "^8.1.10",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "tailwindcss": "^2.0.1"
   }
 }

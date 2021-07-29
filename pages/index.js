@@ -1,209 +1,106 @@
-import Head from 'next/head'
-
+import Head from "next/head";
+import Link from "next/link";
+import Image from "next/image";
 export default function Home() {
   return (
-    <div className="container">
+    <body>
       <Head>
-        <title>Create Next App</title>
+        <title>Simplicity Sarnia</title>
+        <meta
+          name="keywords"
+          content="Automotive Collision Autobody Sarnia Repair Paint Estimates Estimate Car Vehicle
+          Dent Dents Quality Body Shop Near Me Bluewater Simplicity"
+        />
+        <meta description="Formerly known as Bluewater Auto Painting Body Work &amp; Collision Centre" />
+
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <main className="main">
+        <section className="my-16">
+          <h1 className="text-6xl font-large text-black ml-6 md:text-center lg:text-center">Simplicity</h1>
+          <h3 className="text-gray-300 ml-16 md:ml-0 lg:ml-0 md:text-center lg:text-center">Sarnia</h3>
 
-      <main>
-        <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
-
-        <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
+          <section className="max-w-3xl rounded-lg mx-auto my-15 p-16 md:text-center lg:text-center">
+            <h2 className="text-2xl font-medium mb-2">
+              Autobody Collision Repair &amp; Painting Services
+            </h2>
+            <h2 className="font-medium text-sm text-blue-600  mb-4 uppercase tracking-wide">
+              {/* A body shop you can trust */}
+            </h2>
+            <p className="text-gray-400">
+              {" "}
+              Discover our{" "}
+              <Link href="/services">
+                <a className="font-large text-lg hover:text-indigo-600 uppercase tracking-wide shadow-lg text-gray-800">
+                  Services
+                </a>
+              </Link>
             </p>
-          </a>
-        </div>
+          </section>
+        </section>
+        <section>
+          <h3 className="font-bold text-xl font-large tracking-wide text-center mt-6">
+            SIMPLY THE BEST SERVICE!
+          </h3>
+          <p className="text-md font-sm tracking-wide mx-6 text-justify">
+            We simplify car care by delivering an amazing service experience.
+            Our high quality paint and repair services will have you back on the
+            road with your vehicle in amazing shape!
+          </p>
+          <ul className="flex flex-wrap sm:justify-center md:justify-around lg:justify-around flex-col md:flex-row lg:flex-row">
+            <li className="homeServices">
+              <Image
+                src="/../public/images/estimates.png"
+                width={"80"}
+                height={"80"}
+                objectFit='scale-down'
+                aria-hidden="true"
+                className="homeServicesImage"
+              />
+              <br />
+              <span className="homeServicesText">Free Estimates</span>
+            </li>
+            <li className="homeServices">
+              <Image
+                src="/../public/images/quality.png"
+                width={"80"}
+                height={"80"}
+                aria-hidden="true"
+                objectFit='scale-down'
+                className="homeServicesImage"
+              />
+              <br />
+              <span className="homeServicesText block mx-auto">Quality Service</span>
+            </li>
+            <li className="homeServices">
+              <Image
+                src="/../public/images/experienced.png"
+                width={"80"}
+                height={"80"}
+                aria-hidden="true"
+                objectFit='scale-down'
+                className="homeServicesImage"
+              />
+              <br />
+              <span className="homeServicesText">Experienced Technicians</span>
+            </li>
+          </ul>
+        </section>
+        <section className="h-32 flex flex-col text-center w-full justify-items-center content-center bg-gray-500 border-b-2 border-t-2 border-black">
+          <div className="w-full h-32 flex flex-col flex-wrap justify-center bg-red-100">
+            <h3 className="font-bold font-large text-xl tracking-wide align-center">
+              Interested In Our Services?
+            </h3>
+            <button className="bg-blue-600 self-center align-center mt-4 ring-blue-600 ring-opacity-60 ring-4 rounded">
+              <Link href="/contact">
+                <a className="p-2 rounded font-large text-xl text-white tracking-wide">
+                  Contact Us
+                </a>
+              </Link>
+            </button>
+          </div>
+        </section>
       </main>
-
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
-        </a>
-      </footer>
-
-      <style jsx>{`
-        .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer img {
-          margin-left: 0.5rem;
-        }
-
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        a {
-          color: inherit;
-          text-decoration: none;
-        }
-
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
-        }
-
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
-
-        .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 4rem;
-        }
-
-        .title,
-        .description {
-          text-align: center;
-        }
-
-        .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
-        }
-
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-
-        .grid {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-
-          max-width: 800px;
-          margin-top: 3rem;
-        }
-
-        .card {
-          margin: 1rem;
-          flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
-        }
-
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
-        }
-
-        .card h3 {
-          margin: 0 0 1rem 0;
-          font-size: 1.5rem;
-        }
-
-        .card p {
-          margin: 0;
-          font-size: 1.25rem;
-          line-height: 1.5;
-        }
-
-        .logo {
-          height: 1em;
-        }
-
-        @media (max-width: 600px) {
-          .grid {
-            width: 100%;
-            flex-direction: column;
-          }
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
-    </div>
-  )
+    </body>
+  );
 }
